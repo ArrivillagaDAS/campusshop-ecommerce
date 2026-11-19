@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Botín | JINX SHOP</title>
+    <title>Carrito | CampusShop</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
 </head>
-<body>
+<body data-page="cart">
     <header class="main-header">
         <div class="header-container">
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href="index.html">🏠 Inicio</a></li>
                     <li><a href="catalogo.html">📂 Catálogo</a></li>
-                    <li><a href="carrito.html">🛒 Carrito</a></li>
+                    <li><a href="carrito.html">🛒 Carrito <span class="cs-nav-count" data-cart-count>0</span></a></li>
                     <li><a href="perfil.html">👤 Perfil</a></li>
                 </ul>
             </nav>
@@ -29,66 +29,33 @@
     </header>
 
     <main class="content cart-layout">
-        <section class="cart-items">
-            <div class="cart-item">
-                <img src="img/chaqueta1.webp" class="cart-item-img">
-                <div class="cart-item-info">
-                    <h4>Chaqueta Arcane</h4>
-                    <p class="ref">Ref: #SKU12345</p>
-                    <div class="cart-qty">
-                        <button class="qty-btn">−</button>
-                        <span class="qty-num">1</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                </div>
-                <div class="cart-item-price">
-                    <button class="delete-btn">🗑️</button>
-                    <p class="price">$127.50</p>
-                    <span class="subtotal-label">subtotal</span>
-                </div>
-            </div>
-
-            <div class="cart-item">
-                <img src="img/poro1.webp" class="cart-item-img">
-                <div class="cart-item-info">
-                    <h4>Sombrero de Poro</h4>
-                    <p class="ref">Ref: #SKU67890</p>
-                    <div class="cart-qty">
-                        <button class="qty-btn">−</button>
-                        <span class="qty-num">2</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                </div>
-                <div class="cart-item-price">
-                    <button class="delete-btn">🗑️</button>
-                    <p class="price">$50.00</p>
-                    <span class="subtotal-label">subtotal</span>
-                </div>
-            </div>
-        </section>
+        <section class="cart-items" aria-live="polite"></section>
 
         <aside class="cart-summary">
             <div class="summary-details">
                 <div class="summary-line">
                     <span>Subtotal</span>
-                    <span>$177.50</span>
+                    <span data-subtotal>$0.00</span>
                 </div>
                 <div class="summary-line">
-                    <span>Impuestos</span>
-                    <span>$15.30</span>
+                    <span>IVA (12%)</span>
+                    <span data-tax>$0.00</span>
                 </div>
                 <hr class="summary-divider">
                 <div class="summary-line total">
                     <span>Total</span>
-                    <span class="total-price">$192.80</span>
+                    <span class="total-price" data-total>$0.00</span>
                 </div>
             </div>
-            <button class="btn-jinx btn-pay">PROCEDER AL PAGO</button>
+            <button type="button" class="btn-jinx btn-pay">PROCEDER AL PAGO</button>
         </aside>
     </main>
 
     <footer class="main-footer">
         <p>2026 | JinxShop. Todos los derechos reservados.</p>
     </footer>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/pages.js"></script>
 </body>
 </html>

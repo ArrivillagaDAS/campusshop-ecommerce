@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
 </head>
-<body class="dark-theme">
+<body class="dark-theme" data-page="product">
 
     <header class="main-header">
         <div class="header-container">
@@ -16,9 +16,9 @@
                 <h1 class="logo-text">JINX <span class="flicker">Shop</span></h1>
             </div>
             <div class="header-right">
-                <a href="vacio.html" class="cart-main-button">
+                <a href="carrito.html" class="cart-main-button">
                     <span class="cart-icon">🛒</span>
-                    <span class="cart-number">0</span>
+                    <span class="cart-number" data-cart-count>0</span>
                 </a>
             </div>
         </div>
@@ -32,6 +32,7 @@
         <section class="product-detail">
             <div class="product-image-container">
                 <img src="img/chaqueta1.webp" alt="Chaqueta Reversible" class="main-img">
+                <div class="cs-thumbs" data-thumbs></div>
             </div>
 
             <div class="product-info">
@@ -43,19 +44,18 @@
 
                 <div class="size-selector">
                     <span>Talla</span>
-                    <div class="sizes">
-                        <button>S</button>
-                        <button class="active">M</button>
-                        <button>L</button>
-                    </div>
+                    <div class="sizes"></div>
                 </div>
             </div>
         </section>
 
         <footer class="product-footer">
-            <button class="btn-add-to-cart">Agregar al carrito</button>
+            <button type="button" class="btn-add-to-cart">Agregar al carrito</button>
         </footer>
     </main>
 
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/pages.js"></script>
 </body>
 </html>

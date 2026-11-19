@@ -916,3 +916,132 @@
         text-shadow: none;
     }
 }
+/* ===== Tienda funcional (js/pages.js) ===== */
+a.category-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.cs-nav-count {
+    display: inline-block;
+    min-width: 1.4em;
+    padding: 0 6px;
+    margin-left: 6px;
+    border-radius: 999px;
+    background: var(--jinx-pink);
+    color: #fff;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.cs-catalog-search {
+    margin-bottom: 20px;
+}
+
+.cs-empty-search,
+.cs-demo-note {
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cs-demo-note {
+    font-size: 0.85rem;
+    padding: 10px 0 0;
+}
+
+.cs-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cs-link:hover {
+    color: var(--jinx-blue);
+}
+
+.cs-thumbs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.cs-thumb {
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cs-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cs-thumb.active {
+    border-color: var(--jinx-blue);
+    box-shadow: 0 0 6px var(--jinx-blue);
+}
+
+.btn-add-to-cart {
+    cursor: pointer;
+}
+
+.payment-card {
+    cursor: pointer;
+}
+
+.payment-card:focus-visible,
+.cs-thumb:focus-visible,
+.sizes button:focus-visible {
+    outline: 2px solid var(--jinx-blue);
+    outline-offset: 2px;
+}
+
+button.btn-detail {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.cs-order-items {
+    margin: 12px 0 0;
+    padding-left: 18px;
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.cs-new-order {
+    box-shadow: 0 0 15px var(--jinx-blue);
+}
+
+.cs-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 110px;
+    transform: translate(-50%, 20px);
+    max-width: calc(100% - 32px);
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #111;
+    border: 1px solid var(--jinx-blue);
+    box-shadow: 0 0 12px var(--jinx-blue);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.cs-toast.visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}

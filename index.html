@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusJinx - Shop</title>
+    <title>CampusShop | Tienda universitaria</title>
+    <meta name="description" content="CampusShop: tienda en línea universitaria de ropa, gorros y joyería.">
+    <link rel="icon" href="img/logo-jinx.png">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body data-page="home">
 
     <header class="main-header">
     <div class="header-container">
@@ -20,12 +22,11 @@
     <span></span>
     <span></span>
     </label>
-    <nav class="side-menu">...</nav>
 
         <nav class="side-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="carrito.html">Carrito <span class="cs-nav-count" data-cart-count>0</span></a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="checkout.html">Checkout</a></li>
                 <li><a href="perfil.html">Perfil</a></li>
@@ -40,63 +41,41 @@
         </div>
     
         <div class="header-right">
-    <a href="vacio.html" class="cart-main-button">
+    <a href="carrito.html" class="cart-main-button" aria-label="Ver carrito">
         <span class="cart-icon">🛒</span>
-        <span class="cart-number">0</span>
+        <span class="cart-number" data-cart-count>0</span>
     </a>
 </div>
-
+    </div>
     </header>
 
     <main class="content">
                 <section class="search-section">
             <div class="search-container">
                 <i class="search-icon">🔍</i>
-                <input type="text" class="jinx-search" placeholder="Buscar tesoros de Zaun...">
+                <input type="search" class="jinx-search" placeholder="Buscar tesoros de Zaun..." aria-label="Buscar productos (Enter para buscar)">
             </div>
         </section>
 
         <section class="categories-section">
             <h2 class="neon-subtitle">CATEGORÍAS POPULARES</h2>
             <div class="categories-grid">
-                <div class="category-card">
+                <a href="catalogo.html#ropa" class="category-card">
                     <span>ROPA</span>
-                </div>
-                <div class="category-card">
+                </a>
+                <a href="catalogo.html#gorros" class="category-card">
                     <span>GORROS</span>
-                </div>
-                <div class="category-card">
-                    <span>JOYERIA</span>
-                </div>
+                </a>
+                <a href="catalogo.html#joyeria" class="category-card">
+                    <span>JOYERÍA</span>
+                </a>
             </div>
         </section>
 
         <section class="products-section">
             <h2 class="neon-subtitle">NOVEDADES PARA TI</h2>
-            <div class="products-grid">
-                
-                <article class="product-card">
-                    <div class="image-box">
-                        <img src="img/chaqueta1.webp" alt="Chaqueta">
-                    </div>
-                    <div class="card-content">
-                        <h3>Chaqueta Kai'Sa</h3>
-                        <p class="price">$127.50</p>
-                        <a href="producto.html" class="btn-neon-mini">VER</a>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="image-box">
-                        <img src="img/yasuo1.webp" alt="Camiseta">
-                    </div>
-                    <div class="card-content">
-                        <h3>Camiseta Gráfica</h3>
-                        <p class="price">$35.00</p>
-                        <button class="btn-neon-mini">VER</button>
-                    </div>
-                </article>
-
+            <div class="products-grid" data-featured>
+                <noscript><p>Activa JavaScript para ver los productos.</p></noscript>
             </div>
         </section>
         </main>
@@ -106,5 +85,8 @@
         <p>Todos los derechos reservados.</p>
     </footer>
 
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/pages.js"></script>
 </body>
 </html>

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historial de Pedidos | JINX Shop</title>
+    <title>Historial de pedidos | CampusShop</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
 </head>
-<body class="dark-theme">
+<body class="dark-theme" data-page="history">
 
     <header class="main-header">
         <div class="header-container">
@@ -16,7 +16,7 @@
         </div>
     </header>
 
-    <main class="history-container">
+    <main class="history-container" data-orders>
         <div class="order-card border-green">
             <div class="order-header">
                 <h3>Orden #12345</h3>
@@ -55,5 +55,8 @@
     </main>
 
 
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/pages.js"></script>
 </body>
 </html>

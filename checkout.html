@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar Compra | JINX Shop</title>
+    <title>Finalizar compra | CampusShop</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
 </head>
-<body class="dark-theme">
+<body class="dark-theme" data-page="checkout">
 
     <header class="main-header">
         <div class="header-container">
@@ -26,61 +26,60 @@
     </header>
 
     <main class="checkout-container">
+        <form id="checkout-form" novalidate>
         <section class="checkout-section">
             <h2 class="section-neon-title">Envío</h2>
             <div class="form-group">
-                <label>Nombre Completo</label>
-                <input type="text" placeholder="Ingresa tu nombre completo" class="jinx-input">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" class="jinx-input" required minlength="3" autocomplete="name">
             </div>
             <div class="form-group">
-                <label>Dirección</label>
-                <input type="text" placeholder="Ingresa tu dirección en Zaun" class="jinx-input">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección en Zaun" class="jinx-input" required minlength="5" autocomplete="street-address">
             </div>
             <div class="form-group">
-                <label>Ciudad</label>
-                <input type="text" placeholder="Tu ciudad" class="jinx-input">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" class="jinx-input" required autocomplete="address-level2">
             </div>
         </section>
 
         <section class="checkout-section">
-            <h2 class="section-neon-title">Método de Pago</h2>
-            <div class="payment-grid">
-                <div class="payment-card active">
+            <h2 class="section-neon-title">Método de pago</h2>
+            <input type="hidden" name="pago" value="Tarjeta">
+            <div class="payment-grid" role="radiogroup" aria-label="Método de pago">
+                <div class="payment-card active" role="radio" aria-checked="true" tabindex="0" data-method="Tarjeta">
                     <span class="icon">💳</span>
-                    <p>Misa</p>
+                    <p>Tarjeta</p>
                 </div>
-                <div class="payment-card">
+                <div class="payment-card" role="radio" aria-checked="false" tabindex="0" data-method="Transferencia">
                     <span class="icon">🏦</span>
-                    <p>MasCard</p>
+                    <p>Transferencia</p>
                 </div>
-                <div class="payment-card">
+                <div class="payment-card" role="radio" aria-checked="false" tabindex="0" data-method="Billetera digital">
                     <span class="icon">📱</span>
-                    <p>Peypal</p>
+                    <p>Billetera digital</p>
                 </div>
             </div>
+            <p class="cs-demo-note">Tienda de demostración: no se procesa ningún pago real.</p>
         </section>
 
         <section class="order-summary-box">
-            <h3 class="summary-title">Resumen de tu Orden</h3>
-            
-            <div class="summary-item">
-                <div class="item-info">
-                    <p class="item-name">Chaqueta Kai'Sa</p>
-                    <p class="item-qty">Cantidad: 1</p>
-                </div>
-                <span class="item-price">$127.50</span>
-            </div>
-
+            <h3 class="summary-title">Resumen de tu orden</h3>
+            <div data-order-lines></div>
             <div class="summary-total">
                 <span>Total</span>
-                <span class="total-amount">$127.50</span>
+                <span class="total-amount" data-order-total>$0.00</span>
             </div>
         </section>
 
         <footer class="checkout-footer">
-            <button class="btn-pay-neon">Pagar $127.50</button>
+            <button type="submit" class="btn-pay-neon">Pagar</button>
         </footer>
+        </form>
     </main>
 
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/pages.js"></script>
 </body>
 </html>
