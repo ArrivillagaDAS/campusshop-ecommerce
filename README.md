@@ -1,114 +1,62 @@
-# 🎓 CampusShop(JINXShop) | E-Commerce Universitario
+# CampusShop: tienda en línea universitaria
 
-¡Hola! 👋 Bienvenid@ al repositorio de **CampusShop(JINXShop) **, un proyecto dedicado a la maquetación integral de un E-Commerce diseñado por y para estudiantes. 
+Tienda en línea de estética neón (JINX Shop) hecha con HTML, CSS y JavaScript vanilla. Funciona en el navegador, sin servidor, sin frameworks y sin paso de build.
 
-Este proyecto nace de la necesidad de crear una plataforma de compra-venta dentro del entorno académico, con una interfaz súper *clean*, intuitiva y, sobre todo, fiel a los lineamientos estéticos del equipo de diseño. ✨
+**Sitio publicado:** https://arrivillagadas.github.io/campusshop-ecommerce/
 
-## 🌟 El Proyecto
-El objetivo principal es replicar con precisión quirúrgica los mockups y el wireframe oficial, utilizando únicamente las bases del desarrollo web: **HTML5 y CSS3**. 
+## Funcionalidades
 
-Aquí no hay trucos de magia (JS), ni frameworks pesados. Es puro amor por el código limpio, la semántica y el diseño responsivo. 👩‍💻✨
+- **Inicio:** buscador (Enter abre el catálogo filtrado), categorías y productos destacados.
+- **Catálogo:** productos agrupados por categoría, carrusel de imágenes por producto y búsqueda en vivo (sin distinguir acentos).
+- **Detalle de producto:** galería con miniaturas, selector de talla y botón para agregar al carrito.
+- **Carrito:** cantidades editables, eliminar productos, subtotal, IVA (12 %) y total calculados. Contador del carrito en el menú.
+- **Checkout:** formulario de envío con validación, método de pago y resumen de la orden. Es una demo: no procesa pagos reales.
+- **Historial:** los pedidos confirmados se guardan y se pueden desplegar para ver su detalle.
+- **Otras vistas:** perfil, preguntas frecuentes, soporte, carrito vacío y página 404.
 
-## 🎨 Design
-La identidad visual de CampusShop(JINXShop)  se define por:
-* **Vibras Estudiantiles:** Una paleta clara y profesional con acentos en **Violeta y Azul**.
-* **Minimalismo:** Iconografía sencilla y moderna.
-* **Detalles Soft:** Cards con sombras suaves y layouts ordenados.
-* **Mobile-First:** Porque como estudiantes, ¡siempre estamos con el celular en la mano!
+El carrito y los pedidos se guardan en el `localStorage` del navegador, así que se conservan al recargar la página.
 
-## 📂 Estructura de Vistas
-He maquetado todas las pantallas necesarias para una experiencia de usuario completa:
+## Ejecutar localmente
 
-* 🏠 **Home:** El punto de entrada con buscador y productos destacados.
-* 🛍️ **Catálogo:** Grid de productos con filtros visuales simulados.
-* 🔍 **Detalle de Producto:** Vista ampliada con descripción y tags.
-* 🛒 **Carrito:** Resumen de compras y lista de artículos.
-* 💳 **Checkout:** Formularios limpios para finalizar la "compra".
-* 👤 **Perfil & Historial:** Espacio personal del estudiante y rastro de pedidos.
-* ✨ **Pantallas de Estado:** Vistas de error y carrito vacío con ilustraciones.
+Abre `index.html` en el navegador (doble clic). Todos los scripts son clásicos, así que también funciona con `file://`.
 
-## 🛠️ Stack Tecnológico
-* **HTML5:** Estructura 100% semántica (`<header>`, `<nav>`, `<main>`, etc.).
-* **CSS3:** Diseño modular, sin preprocesadores. 
-    * Uso de *Flexbox* y *CSS Grid*.
-    * Variables CSS para mantener la coherencia de colores.
-    * Media Queries para un diseño responsivo impecable.
+Si prefieres un servidor local:
 
-## 📁 Organización de Archivos
-Para mantener el proyecto ordenado (como mis apuntes de clase 📒), la estructura es la siguiente:
+```bash
+python -m http.server 8000
+```
+
+y abre `http://localhost:8000`.
+
+## Estructura
 
 ```text
-CampusShop/
- ├── css/
- │    ├── base.css        # Resets y variables globales
- │    ├── layout.css      # Estructura (Header, Footer, Grids)
- │    ├── components.css  # Botones, Cards, Inputs
- │    └── responsive.css  # Media queries mágicas
- ├── img/                 # Assets, iconos y placeholders
- └── [vistas].html        # Todas las páginas del sitio
+campusshop-ecommerce/
+├── css/
+│   ├── base.css          # Variables de color y estilos globales
+│   ├── layout.css        # Encabezado, menú lateral, pie y grids
+│   ├── components.css    # Tarjetas, botones, carrito, checkout, historial
+│   └── responsive.css    # Media queries
+├── js/
+│   ├── data.js           # Catálogo: categorías y productos
+│   ├── store.js          # Carrito, pedidos, formato de precios y avisos
+│   └── pages.js          # Lógica de cada vista (según data-page del <body>)
+├── img/                  # Logo, fondos y fotos de producto
+└── *.html                # Vistas del sitio
+```
 
-¡Hola! Qué increíble proyecto. Me encanta el concepto de CampusShop, tiene ese aire de comunidad universitaria súper fresco. Como estamos trabajando con un enfoque mobile-first y CSS puro, he diseñado un README que refleja esa estética limpia y organizada, pero con ese toque "aesthetic" y estudiantil que pediste.
+## Personalizar la tienda
 
-Aquí tienes la propuesta para tu archivo README.md.
+1. Edita los productos y categorías en `js/data.js` (nombre, precio, imágenes, tallas, descripción y etiqueta).
+2. Cambia los colores en las variables de `css/base.css`.
+3. Ajusta el porcentaje de impuesto en `CS.TAX_RATE` dentro de `js/store.js`.
 
-Markdown
-# 🎓 CampusShop | E-Commerce Universitario
+## Tecnologías
 
-¡Hola! 👋 Bienvenida al repositorio de **CampusShop**, un proyecto dedicado a la maquetación integral de un E-Commerce diseñado por y para estudiantes. 
+- HTML5 semántico.
+- CSS3 con Flexbox, Grid, variables y diseño responsive.
+- JavaScript vanilla, sin dependencias.
 
-Este proyecto nace de la necesidad de crear una plataforma de compra-venta dentro del entorno académico, con una interfaz súper *clean*, intuitiva y, sobre todo, fiel a los lineamientos estéticos del equipo de diseño. ✨
+## Aviso sobre las imágenes
 
-## 🌟 El Proyecto
-El objetivo principal es replicar con precisión quirúrgica los mockups y el wireframe oficial, utilizando únicamente las bases del desarrollo web: **HTML5 y CSS3**. 
-
-Aquí no hay trucos de magia (JS), ni frameworks pesados. Es puro amor por el código limpio, la semántica y el diseño responsivo. 👩‍💻✨
-
-## 🎨 Aesthetic & Vibes
-La identidad visual de CampusShop se define por:
-* **Vibras Estudiantiles:** Una paleta clara y profesional con acentos en **Violeta y Azul**.
-* **Minimalismo:** Iconografía sencilla y moderna.
-* **Detalles Soft:** Cards con sombras suaves y layouts ordenados.
-* **Mobile-First:** Porque como estudiantes, ¡siempre estamos con el celular en la mano!
-
-## 📂 Estructura de Vistas
-He maquetado todas las pantallas necesarias para una experiencia de usuario completa:
-
-* 🏠 **Home:** El punto de entrada con buscador y productos destacados.
-* 🛍️ **Catálogo:** Grid de productos con filtros visuales simulados.
-* 🔍 **Detalle de Producto:** Vista ampliada con descripción y tags.
-* 🛒 **Carrito:** Resumen de compras y lista de artículos.
-* 💳 **Checkout:** Formularios limpios para finalizar la "compra".
-* 👤 **Perfil & Historial:** Espacio personal del estudiante y rastro de pedidos.
-* ✨ **Pantallas de Estado:** Vistas de error y carrito vacío con ilustraciones.
-
-## 🛠️ Stack Tecnológico
-* **HTML5:** Estructura 100% semántica (`<header>`, `<nav>`, `<main>`, etc.).
-* **CSS3:** Diseño modular, sin preprocesadores. 
-    * Uso de *Flexbox* y *CSS Grid*.
-    * Variables CSS para mantener la coherencia de colores.
-    * Media Queries para un diseño responsivo impecable.
-
-## 📁 Organización de Archivos
-Para mantener el proyecto ordenado (como mis apuntes de clase 📒), la estructura es la siguiente:
-
-```text
-CampusShop/
- ├── css/
- │    ├── base.css        # Resets y variables globales
- │    ├── layout.css      # Estructura (Header, Footer, Grids)
- │    ├── components.css  # Botones, Cards, Inputs
- │    └── responsive.css  # Media queries mágicas
- ├── img/                 # Assets, iconos y placeholders
- └── [vistas].html        # Todas las páginas del sitio
-
-
-🎀 Notas de Desarrollo
-Sin JavaScript: Todas las interacciones (hovers, transiciones) están hechas puramente con CSS.
-
-Accesibilidad: Priorizando un contraste AA para que todos en el campus puedan usarlo.
-
-Modularidad: Código fácil de leer y mantener.
-
-___
-
-Hecho con mucha cafeína y dedicación por una estudiante de desarrollo. ✨💻
+Las fotos de producto y la temática son de mercancía de terceros y se usan solo con fines académicos. Para usar esta tienda con fines comerciales hay que reemplazarlas por imágenes propias o con licencia.

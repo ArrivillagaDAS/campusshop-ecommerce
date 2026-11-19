@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arsenal | JINX SHOP</title>
+    <title>Catálogo | CampusShop</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
 </head>
-<body>
+<body data-page="catalog">
     <header class="main-header">
         <div class="header-container">
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href="index.html">🏠 Inicio</a></li>
                     <li><a href="catalogo.html">📂 Catálogo</a></li>
-                    <li><a href="carrito.html">🛒 Carrito</a></li>
+                    <li><a href="carrito.html">🛒 Carrito <span class="cs-nav-count" data-cart-count>0</span></a></li>
                     <li><a href="perfil.html">👤 Perfil</a></li>
                 </ul>
             </nav>
@@ -39,171 +39,21 @@
         </aside>
 
         <div class="products-container">
-
-<!-- ROPA -->
-
-            <h2 id="ropa" class="section-title">ROPA DE ZAUN</h2>
-            <section class="products-grid">
-
-                <div class="product-card">
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/chaqueta1.webp" alt="Ropa 1">
-                            <img src="img/chaqueta2.webp" alt="Ropa 2">
-                            <img src="img/chaqueta3.webp" alt="Ropa 3">
-                            <img src="img/chaqueta4.webp" alt="Ropa 4">
-                        </div>
-                    </div>
-                    <h4>Chaqueta reversible Kai'Sa y Akali</h4>
-                    <p class="price">$127.50</p>
-                    <div class="product-card">
-                        <a href="producto.html" class="btn-ver-producto">VER PRODUCTO</a>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/calcetas1.webp" alt="Ropa 1">
-                            <img src="img/calcetas2.webp" alt="Ropa 2">
-                            <img src="img/calcetas3.webp" alt="Ropa 3">
-                        </div>
-                    </div>
-                    <h4>Calcetines TFT™ (3 pares)</h4>
-                    <p class="price">$25.99</p>
-                    <button class="btn-jinx">VER PRODUCTO</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/yasuo1.webp" alt="Ropa 1">
-                            <img src="img/yasuo2.webp" alt="Ropa 2">
-                            <img src="img/yasuo3.webp" alt="Ropa 3">
-                        </div>
-                    </div>
-                    <h4>Camiseta de Yasuo chibi</h4>
-                    <p class="price">$31.99</p>
-                    <button class="btn-jinx">VER PRODUCTO</button>
-                </div>
-
-            </section>
-
-<!-- gorros -->
-
-            <h2 id="gorros" class="section-title">GORROS LOCOS</h2>
-            <section class="products-grid">
-                <div class="product-card">
-                    <span class="badge">NUEVO</span>
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/poro1.webp" alt="Poro 1">
-                            <img src="img/poro2.webp" alt="Poro 2">
-                            <img src="img/poro3.webp" alt="Poro 3">
-                        </div>
-                    </div>
-                    <h4>Sombrero de Poro</h4>
-                    <p class="price">$25.00</p>
-                    <button class="btn-jinx">VER PRODUCTO</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/tibbers1.webp" alt="Oso 1">
-                            <img src="img/tibbers2.webp" alt="Oso 2">
-                            <img src="img/tibbers3.webp" alt="Oso 3">
-                        </div>
-                    </div>
-                    <h4>Sombrero de Tibbers</h4>
-                    <p class="price">$30.00</p>
-                    <button class="btn-jinx">VER PRODUCTO</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/abeja1.webp" alt="Abeja 1">
-                            <img src="img/abeja2.webp" alt="Abeja 2">
-                            <img src="img/abeja3.webp" alt="Abeja 3">
-                        </div>
-                    </div>
-                    <h4>Sombrero de Abeja</h4>
-                    <p class="price">$28.00</p>
-                    <button class="btn-jinx">VER PRODUCTO</button>
-                </div>
-            </section>
-
-<!-- joyeria -->
-
-            <h2 id="joyeria" class="section-title">JOYERÍA HEXTECH</h2>
-            <section class="products-grid">
-
-                <div class="product-card">
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/joya1.webp" alt="Joya 1 - Vista 1">
-                            <img src="img/joya2.webp" alt="Joya 1 - Vista 2">
-                            <img src="img/joya3.webp" alt="Joya 1 - Vista 3">
-                        </div>
-                    </div>
-                    <h4>Collar Espinas de Arcane de RockLove</h4>
-                    <p class="price">$98.99</p>
-                    <button class="btn-jinx">VER PRODUCTO</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/collarestelar1.webp" alt="Joya 2 - Vista 1">
-                            <img src="img/collarestelar2.webp" alt="Joya 2 - Vista 2">
-                            <img src="img/collarestelar3.webp" alt="Joya 2 - Vista 3">
-                        </div>
-                    </div>
-                    <h4>Guardapelo "Esperanza" de Guardianas de las estrellas de RockLove</h4>
-                    <p class="price">$160.00</p>
-                    <button class="btn-jinx">VER PRODUCTO</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="carousel-container">
-                        <button class="nav-arrow btn-prev" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
-                        <button class="nav-arrow btn-next" onclick="this.parentElement.querySelector('.image-carousel').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
-                        <div class="image-carousel">
-                            <img src="img/porocollar1.webp" alt="Joya 3 - Vista 1">
-                            <img src="img/porocollar2.webp" alt="Joya 3 - Vista 2">
-                            <img src="img/porocollar3.webp" alt="Joya 3 - Vista 3">
-                        </div>
-                    </div>
-                    <h4>Colgante de poro con lengua de League of Legends™ | RockLove</h4>
-                    <p class="price">$89.50</p>
-                    <button class="btn-jinx">VER PRODUCTO</button>
-                </div>
-
-            </section>
-
-            
+            <div class="search-container cs-catalog-search">
+                <i class="search-icon">🔍</i>
+                <input type="search" class="jinx-search" data-catalog-search placeholder="Buscar en el catálogo..." aria-label="Buscar en el catálogo">
+            </div>
+            <div data-catalog>
+                <noscript><p>Activa JavaScript para ver el catálogo.</p></noscript>
+            </div>
         </div>
     </main>
 
     <footer class="main-footer">
         <p>2026 | JinxShop. Todos los derechos reservados.</p>
     </footer>
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/pages.js"></script>
 </body>
 </html>
